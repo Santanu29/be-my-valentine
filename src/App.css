@@ -1,0 +1,123 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  height: 80%;
+  /* min-height: 700px; */
+  max-height: 80%;
+  background-color: #ffb3c6;
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 194, 209, 0.48);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(255, 194, 209, 0.48);
+  box-shadow: 10px 10px 5px 0px rgba(255, 194, 209, 0.48);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff0000;
+  text-align: center;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 2.5rem;
+  height: 50%;
+  /* background: #ff0000; */
+  color: #ff4473;
+  max-width: 80%;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  /* margin-top: 1rem; */
+  z-index: 10;
+}
+
+.button-wrapper > button {
+  width: 8rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+.no-button {
+  background-color: #ff2057;
+  color: #ffe5ec;
+  /* display: none; */
+  box-shadow: 0px 0px 0px 0px rgba(255, 32, 87, 0);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.yes-button {
+  background-color: #ffe5ec;
+  color: #ff2057;
+
+  box-shadow: 0px 0px 0px 0px rgba(255, 32, 87, 0); /* No shadow by default */
+  transition: box-shadow 0.2s ease-in-out;
+}
+/* add styles for hover on the button with shadow and transition */
+.yes-button:hover {
+  box-shadow: 10px 10px 5px 0px rgba(255, 32, 87, 0.6);
+  transition: 0.2s;
+}
+
+.no-button:hover {
+  box-shadow: 10px 10px 5px 0px rgba(255, 229, 236, 1);
+  color: rgb(255, 194, 209);
+  transition: 0.2s;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  border-radius: 50%;
+  opacity: 1;
+  animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
